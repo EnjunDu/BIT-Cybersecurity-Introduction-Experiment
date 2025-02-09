@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web安全实验</title>
+</head>
+<body>
+    <h2>Web安全实验</h2>
+    <form action="" method="post">
+        Username: <input type="text" name="username"><br>
+        Password: <input type="password" name="password"><br>
+        <input type="submit" value="Login">
+    </form>
+    <a href="/register">Register</a>
+    {% if error %}
+        <p style="color: red">{{ error }}</p>
+    {% endif %}
+</body>
+</html>

